@@ -10,7 +10,7 @@ variables:
   value: apply
  
 stages:
-- stage: Install Tomcat 
+- stage: Install_Tomcat 
   condition: always()
   jobs:
   - job: TomcatInstallation
