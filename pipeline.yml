@@ -1,0 +1,40 @@
+trigger: 
+  - main
+  - feature*
+
+variables:
+- name: AZSUBSCRIPTION  
+  value: KBCloud
+- name: action
+  value: apply
+ 
+stages:
+- stage: Install Tomcat 
+  condition: always()
+  jobs:
+  - job: TomcatInstallation
+    workspace:
+      clean: all
+    pool:
+      vmImage: "Ubuntu 18.04"    
+    steps:    
+    - task: DownloadSecureFile@1
+      name: privkey
+      displayName: 'Download Private Key'
+      inputs:
+        secureFile: id_soe
+    - script: |                
+        sudo chmod 400 $(privkey.secureFilePath)
+        sudo mkdir -p $HOME/.ssh  
+        cat $(privkey.secureFilePath) > id_rsa
+        cp id_rsa $HOME/.ssh
+
+    - task: AzureCLI@2
+      displayName: 'Ansible'
+      inputs:
+        azureSubscription: $(AZSUBSCRIPTION)
+        scriptType: bash
+        scriptLocation: scriptPath
+        scriptPath: $(Agent.BuildDirectory)/s/build.sh     
+        
+    

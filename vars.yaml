@@ -1,0 +1,3 @@
+# variable_host: 10.0.1.4
+user: azadmin
+tomcat_url: "https://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.66/bin/apache-tomcat-8.5.66.tar.gz"
