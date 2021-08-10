@@ -20,9 +20,7 @@
     loop:
       - openjdk-11-jdk
       - unzip
-      - tree
-      - python3-pip
-
+      
   - name: add tomcat group
     group:
       name: tomcat
