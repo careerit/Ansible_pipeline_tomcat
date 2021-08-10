@@ -1,5 +1,7 @@
 #!/bin/bash
 
+chmod 400 id_rsa
+
 
 echo "Create hosts file"
 echo "[webservers]" > hosts 
