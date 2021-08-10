@@ -1,3 +1,4 @@
+name: Tomcat Installation
 trigger: 
   - main
   - feature*
@@ -9,20 +10,20 @@ variables:
   value: apply
  
 stages:
-- stage: Install Tomcat 
+- stage: Install_Tomcat 
   condition: always()
   jobs:
   - job: TomcatInstallation
     workspace:
       clean: all
     pool:
-      vmImage: "Ubuntu 18.04"    
+      Victory    
     steps:    
     - task: DownloadSecureFile@1
       name: privkey
       displayName: 'Download Private Key'
       inputs:
-        secureFile: id_soe
+        secureFile: id_demo
     - script: |                
         sudo chmod 400 $(privkey.secureFilePath)
         sudo mkdir -p $HOME/.ssh  
