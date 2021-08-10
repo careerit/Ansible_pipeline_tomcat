@@ -5,10 +5,9 @@ trigger:
 
 variables:
 - name: AZSUBSCRIPTION  
-  value: KBCloud
-- name: action
-  value: apply
- 
+  value: AzCloud
+
+
 stages:
 - stage: Install_Tomcat 
   condition: always()
