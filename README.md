@@ -1,13 +1,12 @@
 # Pipeline to Install Tomcat with Ansible
 
-
 ## Azure Connection
 
 
 - Get the tenant ID of your subscription
 
 ```bash
-az ad account show
+az account show
 ```
 
 - Create Service Principle for the Azure DevOps Service Connection
@@ -26,3 +25,18 @@ To specifically get AppID and Service Principal
 - Select Azure Resource manager
 - Choose Manual
 - Add the required detials.
+
+
+
+
+
+
+
+
+## Dynamic Inventory
+
+
+```bash
+az vm list --resource-group Victory-rg --show-details --query "[?contains(name, 'web')].privateIps" -otable | tail +3 >> hosts  
+```
+
