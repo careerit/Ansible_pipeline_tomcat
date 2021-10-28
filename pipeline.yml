@@ -6,6 +6,8 @@ trigger:
 variables:
 - name: AZSUBSCRIPTION  
   value: AzCloud
+- name: RESOURCE_GROUP
+  value: opsK-RG
 
 
 stages:
@@ -35,6 +37,7 @@ stages:
         azureSubscription: $(AZSUBSCRIPTION)
         scriptType: bash
         scriptLocation: scriptPath
-        scriptPath: $(Agent.BuildDirectory)/s/build.sh     
+        scriptPath: $(Agent.BuildDirectory)/s/build.sh 
+        Arguments: $(RESOURCE_GROUP)   
         
     
