@@ -18,7 +18,7 @@ stages:
     workspace:
       clean: all
     pool:
-      Victory    
+      SelfHosted    
     steps:    
     - task: DownloadSecureFile@1
       name: privkey
