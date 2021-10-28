@@ -1,5 +1,5 @@
 # variable_host: 10.0.1.4
 user: azadmin
-tomcat_url: "https://mirrors.estointernet.in/apache/tomcat/tomcat-8/v8.5.69/bin/apache-tomcat-8.5.69.tar.gz"
+tomcat_url: "https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.72/bin/apache-tomcat-8.5.72.tar.gz"
 
 
