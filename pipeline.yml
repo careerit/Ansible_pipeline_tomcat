@@ -18,7 +18,7 @@ stages:
     workspace:
       clean: all
     pool:
-      SelfHosted      
+      MyAgentPool      
     steps:    
     - task: DownloadSecureFile@1
       name: privkey
