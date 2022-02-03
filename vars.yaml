@@ -1,5 +1,5 @@
 # variable_host: 10.0.1.4
 user: azadmin
-tomcat_url: "https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.73/bin/apache-tomcat-8.5.73.tar.gz"
+tomcat_url: "https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.75/bin/apache-tomcat-8.5.75.tar.gz"
 
 
