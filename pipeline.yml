@@ -5,7 +5,7 @@ trigger:
 
 variables:
 - name: AZSUBSCRIPTION  
-  value: MyCloud
+  value: MyAZ
 - name: RESOURCE_GROUP
   value: kops-rg
 
