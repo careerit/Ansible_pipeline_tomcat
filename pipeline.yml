@@ -5,9 +5,9 @@ trigger:
 
 variables:
 - name: AZSUBSCRIPTION  
-  value: MyAZ
+  value: KKAzure
 - name: RESOURCE_GROUP
-  value: kops-rg
+  value: tfdemo-rg
 
 
 stages:
@@ -18,7 +18,7 @@ stages:
     workspace:
       clean: all
     pool:
-      MyAgentPool      
+      JavaPool      
     steps:    
     - task: DownloadSecureFile@1
       name: privkey
