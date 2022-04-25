@@ -15,3 +15,5 @@ az vm list --resource-group $RESOURCE_GROUP --show-details \
 
 echo "Run Ansible Playbook"
 ansible-playbook -i hosts tomcat_playbook.yaml --private-key id_rsa
+
+
