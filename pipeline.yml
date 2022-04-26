@@ -27,8 +27,8 @@ stages:
         secureFile: id_demo
     - script: |                
         sudo chmod 400 $(privkey.secureFilePath)
-        sudo mkdir -p $HOME/.ssh  
-        # cat $(privkey.secureFilePath) > id_rsa
+        su  do mkdir -p $HOME/.ssh  
+        cat $(privkey.secureFilePath) > id_rsa
         # cp id_rsa $HOME/.ssh
 
     - task: AzureCLI@2
