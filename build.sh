@@ -1,7 +1,7 @@
 #!/bin/bash
 RESOURCE_GROUP=$1
 
-chmod 400 id_rsa
+# chmod 400 id_rsa
 
 echo -e "Host 10.*\n \tStrictHostKeyChecking no" > ~/.ssh/config
 
