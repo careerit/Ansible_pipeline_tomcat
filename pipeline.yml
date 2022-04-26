@@ -28,8 +28,8 @@ stages:
     - script: |                
         sudo chmod 400 $(privkey.secureFilePath)
         sudo mkdir -p $HOME/.ssh  
-        cat $(privkey.secureFilePath) > id_rsa
-        cp id_rsa $HOME/.ssh
+        # cat $(privkey.secureFilePath) > id_rsa
+        # cp id_rsa $HOME/.ssh
 
     - task: AzureCLI@2
       displayName: 'Ansible'
